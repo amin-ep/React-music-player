@@ -1,0 +1,16 @@
+.progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    padding: 1rem;
+}
+
+.progress input {
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+.progress .time {
+    font-style: italic;
+}

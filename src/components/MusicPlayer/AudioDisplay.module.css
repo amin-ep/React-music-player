@@ -1,0 +1,20 @@
+.display {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.display img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.display .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0 0.5rem;
+}
