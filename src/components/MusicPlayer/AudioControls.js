@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./AudioControls.module.css";
-import { RxTrackPrevious, RxPlay, RxPause, RxTrackNext } from "react-icons/rx";
+import { HiPlay, HiPause } from "react-icons/hi2";
+import { BsFillSkipStartFill, BsSkipEndFill } from 'react-icons/bs'
 import { TbVolume, TbVolumeOff } from "react-icons/tb";
 const AudioControls = (props) => {
-
   const muteHandler = () => {
     props.setMuteVolume((prev) => !prev);
   };
@@ -12,19 +12,28 @@ const AudioControls = (props) => {
       <div className={classes["control-btn"]}>
         <button onClick={() => props.SkipSong(false)}>
           <svg>
-            <RxTrackPrevious />
+            <BsFillSkipStartFill />
           </svg>
         </button>
         <button onClick={() => props.setIsPlaying(!props.isPlaying)}>
-          <svg>{!props.isPlaying ? <RxPlay /> : <RxPause />}</svg>
+          <svg>{!props.isPlaying ? <HiPlay /> : <HiPause />}</svg>
         </button>
         <button onClick={() => props.SkipSong()}>
           <svg>
-            <RxTrackNext />
+            <BsSkipEndFill />
+          </svg>
+        </button>
+        <button onClick={muteHandler}>
+          <svg>
+            {props.muteVolume || props.volume === 0 ? (
+              <TbVolumeOff />
+            ) : (
+              <TbVolume />
+            )}
           </svg>
         </button>
       </div>
-      <div className={classes.volume}>
+      {/* <div className={classes.volume}>
         <input
           type="range"
           value={`${props.volume}`}
@@ -33,12 +42,8 @@ const AudioControls = (props) => {
           max={100}
           ref={props.muteInputRef}
         />
-        <button onClick={muteHandler}>
-          <svg>
-            {props.muteVolume || props.volume === 0 ? <TbVolumeOff /> : <TbVolume />}
-          </svg>
-        </button>
-      </div>
+      
+      </div> */}
     </div>
   );
 };

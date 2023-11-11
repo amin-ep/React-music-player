@@ -82,7 +82,7 @@ const Audio = (props) => {
           ref={audioRef}
           onLoadedMetadata={onLoadedMetaDate}
         ></audio>
-        <AudioDisplay details={props.songs[props.currentSongIndex]} />
+        <AudioDisplay details={props.songs[props.currentSongIndex]} isPlaying={isPlaying} />
         <AudioProgress
           progressbarRef={progressbarRef}
           audioRef={audioRef}

@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './AudioProgress.module.css';
+import classes from "./AudioProgress.module.css";
 
 const AudioProgress = (props) => {
   const formatTime = (time) => {
@@ -17,14 +17,16 @@ const AudioProgress = (props) => {
   };
   return (
     <div className={classes.progress}>
-      <span className={classes.time}>{formatTime(props.progressTime)}</span>
+      <div className={classes.time}>
+        <span className={classes.time}>{formatTime(props.progressTime)}</span>
+        <span className={classes.time}>{formatTime(props.duration)}</span>
+      </div>
       <input
         type="range"
         defaultValue="0"
         ref={props.progressbarRef}
         onChange={progressChangeHandler}
       />
-      <span className={classes.time}>{formatTime(props.duration)}</span>
     </div>
   );
 };
