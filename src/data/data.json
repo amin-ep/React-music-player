@@ -1,0 +1,37 @@
+[
+  {
+    "id": "m1",
+    "name": "Backwards",
+    "artist": "Butimar",
+    "src": "https://play.mp9.ir/b/Backwards%20-%20Butimar%20[320]%20[mp9.ir].mp3",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e2/cb/ef/e2cbeff7-52ab-411d-5a6f-73246dc45ad8/192641877216_Cover.jpg/316x316bb.webp"
+  },
+  {
+    "id": "m2",
+    "name": "S.T.A.Y",
+    "artist": "Hans Zimmer",
+    "src": "https://ts5.tarafdari.com/contents/user300048/content-sound/hans_zimmer_-_s.t.a.y.mp3",
+    "cover": "https://ts5.tarafdari.com/contents/user300048/content-sound/1_9utthayszrvtis8wvzzjog.jpeg"
+  },
+  {
+    "id": "m3",
+    "name": "Another Love",
+    "artist": "Tom Odell",
+    "src": "https://ts15.tarafdari.com/contents/user791178/content-sound/tom-odell-another-love.mp3",
+    "cover": "https://ts15.tarafdari.com/contents/user791178/content-sound/artworks-wnzrzg6yh1vrbsbf-utokcg-t500x500.jpg"
+  },
+  {
+    "id": "m4",
+    "name": "Harry Potter",
+    "artist": "John Williams",
+    "src": "https://media.roozaneh.net/Music/1402/3/01%20-%20Prologue.mp3",
+    "cover": "https://roozaneh.net/wp-content/uploads/2023/06/harry-potter.jpg"
+  },
+  {
+    "id": "m5",
+    "name": "Game Of Thronse",
+    "artist": "Ramin Javadi",
+    "src": "https://media.roozaneh.net/Music/1402/3/01%20Ramin%20Djawadi%20-%20Main%20Title.mp3",
+    "cover": "https://roozaneh.net/wp-content/uploads/2023/06/Game-of-Thrones.jpg"
+  }
+]
