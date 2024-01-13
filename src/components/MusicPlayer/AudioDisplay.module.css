@@ -3,6 +3,8 @@
   flex-direction: column;
   padding: 2.5rem 0 0 0;
   align-items: center;
+  background-color: #000;
+  border-radius: 5px 5px 0 0;
 }
 
 .display img {
@@ -14,7 +16,7 @@
 }
 
 .display-play img {
-    animation: App-logo-spin infinite 15s linear;
+  animation: App-logo-spin infinite 15s linear;
 }
 
 .display .text {
@@ -24,6 +26,7 @@
   align-items: center;
   padding: 0 0.5rem;
   line-height: 0.5;
+  color: #fff;
 }
 
 @keyframes App-logo-spin {

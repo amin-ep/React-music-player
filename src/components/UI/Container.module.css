@@ -1,6 +1,7 @@
 .container {
-    width: 25rem;
-    max-width: 95%;
-    margin: 5rem auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 5);
+  width: 25rem;
+  max-width: 95%;
+  margin: 5rem auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 5);
+  border-radius: 5px;
 }

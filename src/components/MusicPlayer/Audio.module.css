@@ -1,12 +1,14 @@
 .container {
-    background-color: #ffffff;
+  background-color: #121212;
+  border-radius: 5px;
 }
 
 .audio {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .next {
-    text-align: center;
+  text-align: center;
+  color: #fff;
 }

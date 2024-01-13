@@ -36,11 +36,11 @@ const Audio = (props) => {
   });
 
   useEffect(() => {
-    if(audioRef) {
-      audioRef.current.volume = volume / 100
-      audioRef.current.muted = muteVolume
+    if (audioRef) {
+      audioRef.current.volume = volume / 100;
+      audioRef.current.muted = muteVolume;
     }
-  },[audioRef, volume, muteVolume])
+  }, [audioRef, volume, muteVolume]);
 
   const SkipSong = (forwards = true) => {
     if (forwards) {
@@ -82,7 +82,10 @@ const Audio = (props) => {
           ref={audioRef}
           onLoadedMetadata={onLoadedMetaDate}
         ></audio>
-        <AudioDisplay details={props.songs[props.currentSongIndex]} isPlaying={isPlaying} />
+        <AudioDisplay
+          details={props.songs[props.currentSongIndex]}
+          isPlaying={isPlaying}
+        />
         <AudioProgress
           progressbarRef={progressbarRef}
           audioRef={audioRef}
@@ -99,7 +102,10 @@ const Audio = (props) => {
           setMuteVolume={setMuteVolume}
           muteInputRef={muteInputRef}
         />
-        <p className={classes.next}>Next: {props.songs[props.nextSongIndex].name} by {props.songs[props.nextSongIndex].artist}</p>
+        <p className={classes.next}>
+          Next: {props.songs[props.nextSongIndex].name} by{" "}
+          {props.songs[props.nextSongIndex].artist}
+        </p>
       </div>
     </Container>
   );
