@@ -1,6 +1,8 @@
 import Audio from "./Audio";
 import React, { useEffect, useState } from "react";
 import data from "../../data/data.json";
+import styles from "./AudioPlayer.module.css";
+import Container from "../UI/Container";
 const AudioPlayer = () => {
   const [songs] = useState(data);
 
@@ -19,14 +21,35 @@ const AudioPlayer = () => {
   }, [currentSongIndex, songs]);
 
   return (
-    <div>
+    <Container className={styles.container}>
       <Audio
         songs={songs}
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}
         nextSongIndex={nextSongIndex}
       />
-    </div>
+      <ul className={styles.list}>
+        {songs.map((song, index) => (
+          <li
+            key={song.id}
+            className={`${styles["list-item"]} ${
+              index === currentSongIndex && styles.active
+            }`}
+            onClick={() => setCurrentSongIndex(index)}
+          >
+            <img
+              src={song.cover}
+              alt={song.name}
+              className={styles["list-img"]}
+            />
+            <div className={styles["list-details"]}>
+              <p>{song.name}</p>
+              <p>{song.artist}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Container>
   );
 };
 

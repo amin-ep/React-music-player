@@ -3,7 +3,7 @@ import classes from "./Audio.module.css";
 import AudioControls from "./AudioControls";
 import AudioDisplay from "./AudioDisplay";
 import AudioProgress from "./AudioProgress";
-import Container from "../UI/Container";
+
 const Audio = (props) => {
   const audioRef = useRef(null);
   const progressbarRef = useRef(null);
@@ -75,7 +75,7 @@ const Audio = (props) => {
   };
 
   return (
-    <Container className={classes.container}>
+    <>
       <div className={classes.audio}>
         <audio
           src={props.songs[props.currentSongIndex].src}
@@ -107,7 +107,7 @@ const Audio = (props) => {
           {props.songs[props.nextSongIndex].artist}
         </p>
       </div>
-    </Container>
+    </>
   );
 };
 
